@@ -10,9 +10,7 @@ import UIKit
 class ProfileView: UIView {
 
     @IBOutlet weak var image: UIImageView!
-    
     @IBOutlet weak var labelName: UILabel!
-    
     @IBOutlet weak var labelBirthday: UILabel!
     @IBOutlet weak var labelTown: UILabel!
     @IBOutlet weak var labelText: UITextView!
