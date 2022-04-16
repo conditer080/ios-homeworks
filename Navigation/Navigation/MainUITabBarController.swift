@@ -18,13 +18,16 @@ class MainUITabBarController: UITabBarController {
 
     }
     private func setupControllers(){
+        
+        let feedNavController = UINavigationController(rootViewController: feedVC)
         feedVC.tabBarItem.title = "Feed"
         feedVC.tabBarItem.image = UIImage(named: "tick")
+        feedVC.navigationItem.title = "MAIN VC"
         
         profileVC.tabBarItem.title = "Profile"
         profileVC.tabBarItem.image = UIImage(systemName: "bolt")
         
-        viewControllers = [feedVC,profileVC]
+        viewControllers = [feedNavController,profileVC]
     }
 
 }
