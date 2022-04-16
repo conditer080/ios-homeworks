@@ -19,7 +19,10 @@ class MainUITabBarController: UITabBarController {
     }
     private func setupControllers(){
         feedVC.tabBarItem.title = "Feed"
+        feedVC.tabBarItem.image = UIImage(named: "tick")
+        
         profileVC.tabBarItem.title = "Profile"
+        profileVC.tabBarItem.image = UIImage(systemName: "bolt")
         
         viewControllers = [feedVC,profileVC]
     }
