@@ -14,6 +14,7 @@
 		19237994280B2A82001CC2F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19237992280B2A82001CC2F2 /* LaunchScreen.storyboard */; };
 		1923799C280B31DA001CC2F2 /* MainUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923799B280B31DA001CC2F2 /* MainUITabBarController.swift */; };
 		1923799E280B32ED001CC2F2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923799D280B32ED001CC2F2 /* ProfileViewController.swift */; };
+		192379A0280B3F15001CC2F2 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923799F280B3F15001CC2F2 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		19237995280B2A82001CC2F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1923799B280B31DA001CC2F2 /* MainUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUITabBarController.swift; sourceTree = "<group>"; };
 		1923799D280B32ED001CC2F2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1923799F280B3F15001CC2F2 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				19237989280B2A80001CC2F2 /* SceneDelegate.swift */,
 				1923798B280B2A80001CC2F2 /* FeedViewController.swift */,
 				1923799D280B32ED001CC2F2 /* ProfileViewController.swift */,
+				1923799F280B3F15001CC2F2 /* PostViewController.swift */,
 				19237990280B2A82001CC2F2 /* Assets.xcassets */,
 				19237992280B2A82001CC2F2 /* LaunchScreen.storyboard */,
 				19237995280B2A82001CC2F2 /* Info.plist */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192379A0280B3F15001CC2F2 /* PostViewController.swift in Sources */,
 				1923798C280B2A80001CC2F2 /* FeedViewController.swift in Sources */,
 				19237988280B2A80001CC2F2 /* AppDelegate.swift in Sources */,
 				1923799C280B31DA001CC2F2 /* MainUITabBarController.swift in Sources */,
