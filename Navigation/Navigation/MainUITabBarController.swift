@@ -26,7 +26,7 @@ class MainUITabBarController: UITabBarController {
         
         profileVC.tabBarItem.title = "Profile"
         profileVC.tabBarItem.image = UIImage(systemName: "bolt")
-        
+                
         viewControllers = [feedNavController,profileVC]
     }
 
