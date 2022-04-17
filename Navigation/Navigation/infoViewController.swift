@@ -11,7 +11,7 @@ class infoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
+        view.backgroundColor = .init(red: 0.6, green: 0.6, blue: 0.8, alpha: 1)
         makeButton()
     }
     
@@ -21,6 +21,7 @@ class infoViewController: UIViewController {
         button.setTitle("guess what", for: .normal)
         button.backgroundColor = .black
         button.addTarget(self, action: #selector(tapAction), for: .touchUpInside)
+        button.layer.cornerRadius = 8
         view.addSubview(button)
     }
     

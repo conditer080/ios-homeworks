@@ -16,7 +16,7 @@ class FeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .init(red: 0.3, green: 0.6, blue: 0.1, alpha: 1)
+        view.backgroundColor = .init(red: 0.6, green: 0.8, blue: 0.6, alpha: 1)
         makeButton()
         makeBarLeft()
     }
@@ -27,7 +27,6 @@ class FeedViewController: UIViewController {
     }
     @objc private func tapActionLeft() {
         let infoVC = infoViewController()
-       // navigationController?.pushViewController(infoVC, animated: true)
         present(infoVC, animated: true)
     }
     
@@ -35,8 +34,9 @@ class FeedViewController: UIViewController {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
         button.center = view.center
         button.setTitle("PUSH ME", for: .normal)
-        button.backgroundColor = .red
+        button.backgroundColor = .init(red: 0.9, green: 0.3, blue: 0.4, alpha: 1)
         button.addTarget(self, action: #selector(tapAction), for: .touchUpInside)
+        button.layer.cornerRadius = 8
         view.addSubview(button)
     }
     
