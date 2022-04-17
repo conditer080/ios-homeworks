@@ -25,7 +25,12 @@ class infoViewController: UIViewController {
     }
     
     @objc private func tapAction() {
-
+        let alert = UIAlertController(title: "\(post)", message: "send post?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "send", style: .default) {_ in print("\(post)")}
+        let cancelAction = UIAlertAction(title: "cancel", style: .default) {_ in self.dismiss(animated: true)}
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
     }
     
     
