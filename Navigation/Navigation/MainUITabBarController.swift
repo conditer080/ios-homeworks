@@ -24,10 +24,11 @@ class MainUITabBarController: UITabBarController {
         feedVC.tabBarItem.image = UIImage(named: "tick")
         feedVC.navigationItem.title = "MAIN VC"
         
+        let profileNavController = UINavigationController(rootViewController: profileVC)
         profileVC.tabBarItem.title = "Profile"
         profileVC.tabBarItem.image = UIImage(systemName: "bolt")
-                
-        viewControllers = [feedNavController,profileVC]
+        profileVC.navigationItem.title = "Profile"
+        viewControllers = [feedNavController,profileNavController]
     }
 
 }
