@@ -13,8 +13,13 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .lightGray
-        // Do any additional setup after loading the view.
+        
+        let screenRect = UIScreen.main.bounds
+        let screenWidth = screenRect.size.width
+        let screenHeight = screenRect.size.height
+        
+        let profileHV = ProfileHeaderView(frame: CGRect(x: 0, y: 0, width: screenWidth , height: screenHeight))
+        profileHV.customize()
+        view.addSubview(profileHV)
     }
-    
-
 }
