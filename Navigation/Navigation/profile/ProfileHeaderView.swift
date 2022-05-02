@@ -9,7 +9,7 @@ import UIKit
 
 
     var screenProfileHV = UIScreen.main.bounds
-   let screenProfileWidth = screenProfileHV.size.width
+    let screenProfileWidth = screenProfileHV.size.width
     let screenProfileHeight = screenProfileHV.size.height
 
 class ProfileHeaderView: UIView {
@@ -17,12 +17,19 @@ class ProfileHeaderView: UIView {
     
     
     let view = UIView(frame: CGRect(x: 0, y: 0, width: screenProfileWidth , height: screenProfileHeight - 120))
-    let profileImage = UIImageView(frame: CGRect(x: 16, y: 16, width: 100, height: 100))
+    
+    let imageSize: CGFloat = 100
+    lazy var profileImage = UIImageView(frame: CGRect(x: 16, y: 16, width: imageSize, height: imageSize))
+    
     let profileLabel = UILabel.init(frame: CGRect(x: 0, y: 27, width: screenProfileWidth, height: 20))
-    let profileButton = UIButton.init(frame: CGRect(x: 16, y: 132, width: screenProfileWidth - 32, height: 50))
+   
+    lazy var profileButton = UIButton.init(frame: CGRect(x: 16, y: 32 + imageSize, width: screenProfileWidth - 32, height: 50))
     
+    lazy var profileButtonYposition = profileButton.frame.origin.y
     
+    lazy var statusLabel = UILabel.init(frame: CGRect(x: 0, y: profileButtonYposition - 34, width: screenProfileWidth, height: 16))
     
+ 
     
     
     func customize() {
@@ -33,7 +40,7 @@ class ProfileHeaderView: UIView {
         
         profileImage.backgroundColor = .white
         profileImage.image = UIImage(named: "linups_img1")
-        profileImage.layer.cornerRadius = 50
+        profileImage.layer.cornerRadius = imageSize/2
         profileImage.clipsToBounds = true
         profileImage.contentMode = .scaleAspectFit
         profileImage.layer.borderWidth = 3
@@ -52,12 +59,23 @@ class ProfileHeaderView: UIView {
         profileButton.layer.shadowRadius = 4
         profileButton.layer.shadowColor = UIColor.black.cgColor
         profileButton.layer.shadowOpacity = 0.7
+        profileButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        
+        statusLabel.text = "Just waiting"
+        statusLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        statusLabel.textColor = .systemGray6
+        statusLabel.textAlignment = .center
+        
         
         
         addSubview(view)
         addSubview(profileImage)
         addSubview(profileLabel)
         addSubview(profileButton)
-        
+        addSubview(statusLabel)
+    }
+    
+    @objc private func buttonPressed() {
+        print("\(statusLabel.text!)")
     }
 }
