@@ -7,35 +7,57 @@
 
 import UIKit
 
+
+    var screenProfileHV = UIScreen.main.bounds
+   let screenProfileWidth = screenProfileHV.size.width
+    let screenProfileHeight = screenProfileHV.size.height
+
 class ProfileHeaderView: UIView {
     
     
     
-    let view = UIView(frame: CGRect(x: 0, y: 0, width: 1000 , height: 600))
-    let imageView = UIImageView(frame: CGRect(x: 16, y: 16, width: 100, height: 100))
-    let profileLabel = UILabel.init(frame: CGRect(x: 140, y: 27, width: 100, height: 20))
+    let view = UIView(frame: CGRect(x: 0, y: 0, width: screenProfileWidth , height: screenProfileHeight - 120))
+    let profileImage = UIImageView(frame: CGRect(x: 16, y: 16, width: 100, height: 100))
+    let profileLabel = UILabel.init(frame: CGRect(x: 0, y: 27, width: screenProfileWidth, height: 20))
+    let profileButton = UIButton.init(frame: CGRect(x: 16, y: 132, width: screenProfileWidth - 32, height: 50))
+    
+    
+    
     
     
     func customize() {
        
        view.backgroundColor = .lightGray
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.systemGray6.cgColor
         
-        imageView.backgroundColor = .white
-        imageView.image = UIImage(named: "linups_img1")
-        imageView.layer.cornerRadius = 50
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
-        imageView.layer.borderWidth = 3
+        profileImage.backgroundColor = .white
+        profileImage.image = UIImage(named: "linups_img1")
+        profileImage.layer.cornerRadius = 50
+        profileImage.clipsToBounds = true
+        profileImage.contentMode = .scaleAspectFit
+        profileImage.layer.borderWidth = 3
         
         profileLabel.text = "Linups here"
         profileLabel.font = UIFont.boldSystemFont(ofSize: 18)
         profileLabel.textColor = .black
         profileLabel.textAlignment = .center
         
+        profileButton.backgroundColor = .link
+        profileButton.setTitle("Show status", for: .normal)
+        profileButton.setTitleColor(UIColor.white, for: .normal)
+        profileButton.layer.cornerRadius = 4
+        profileButton.layer.shadowOffset.width = 4
+        profileButton.layer.shadowOffset.height = 4
+        profileButton.layer.shadowRadius = 4
+        profileButton.layer.shadowColor = UIColor.black.cgColor
+        profileButton.layer.shadowOpacity = 0.7
+        
         
         addSubview(view)
-        addSubview(imageView)
+        addSubview(profileImage)
         addSubview(profileLabel)
+        addSubview(profileButton)
         
     }
 }

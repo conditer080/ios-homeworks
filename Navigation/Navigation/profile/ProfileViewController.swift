@@ -22,11 +22,10 @@ class ProfileViewController: UIViewController {
 //        let navigationBarWidth: CGFloat = self.navigationController!.navigationBar.frame.width
         let navigationBarHeight: CGFloat = self.navigationController!.navigationBar.frame.height
 //        let statusBarHeigh = UIApplication.shared.statusBarManager?.statusBarFrame.height
-        let statusBarHeigh = view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        let statusBarHeight = view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
         let tabBarHeight = CGFloat((self.tabBarController?.tabBar.frame.size.height)!)
         
-        
-        let profileHV = ProfileHeaderView(frame: CGRect(x: 0, y: 0 + statusBarHeigh + navigationBarHeight, width: screenWidth, height: screenHeight - tabBarHeight ))
+        let profileHV = ProfileHeaderView(frame: CGRect(x: 0, y: 0 + statusBarHeight + navigationBarHeight, width: screenWidth, height: screenHeight - tabBarHeight ))
   
 
         
