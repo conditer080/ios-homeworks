@@ -10,25 +10,19 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+    let profileHV = ProfileHeaderView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        view.backgroundColor = .systemGray4
-        
-        let screenRect = UIScreen.main.bounds
-        let screenWidth = screenRect.size.width
-        let screenHeight = screenRect.size.height
-
-        let navigationBarHeight: CGFloat = self.navigationController!.navigationBar.frame.height
-        let statusBarHeight = view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
-//        let tabBarHeight = CGFloat((self.tabBarController?.tabBar.frame.size.height)!)
-        
-        let profileHV = ProfileHeaderView(frame: CGRect(x: 0, y: 0 + statusBarHeight + navigationBarHeight, width: screenWidth, height: screenHeight))
-  
-
-        
+        view.backgroundColor = .lightGray
         
         profileHV.customize()
         view.addSubview(profileHV)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        profileHV.frame = view.safeAreaLayoutGuide.layoutFrame
     }
 }

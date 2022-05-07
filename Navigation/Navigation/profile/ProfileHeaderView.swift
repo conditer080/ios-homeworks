@@ -8,39 +8,32 @@
 import UIKit
 
 
-    var screenProfileHV = UIScreen.main.bounds
-    let screenProfileWidth = screenProfileHV.size.width
-    let screenProfileHeight = screenProfileHV.size.height
+let screenProfileHV = UIScreen.main.bounds
+let screenProfileWidth = screenProfileHV.size.width
+let screenProfileHeight = screenProfileHV.size.height
+
 
 class ProfileHeaderView: UIView {
     
-    
-    
-    let view = UIView(frame: CGRect(x: 0, y: 0, width: screenProfileWidth , height: screenProfileHeight - 120))
     
     let imageSize: CGFloat = 100
     lazy var profileImage = UIImageView(frame: CGRect(x: 16, y: 16, width: imageSize, height: imageSize))
     
     let profileLabel = UILabel.init(frame: CGRect(x: 0, y: 27, width: screenProfileWidth, height: 20))
-   
+    
     lazy var profileButton = UIButton.init(frame: CGRect(x: 16, y: 32 + imageSize, width: screenProfileWidth - 32, height: 50))
     
     lazy var profileButtonYposition = profileButton.frame.origin.y
     
     lazy var statusLabel = UILabel.init(frame: CGRect(x: 0, y: profileButtonYposition - 34, width: screenProfileWidth, height: 16))
     
- 
-    
-    
     func customize() {
-       
-       view.backgroundColor = .lightGray
-        view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.systemGray6.cgColor
         
+        backgroundColor = .systemGray3
+               
         profileImage.backgroundColor = .white
         profileImage.image = UIImage(named: "linups_img1")
-        profileImage.layer.cornerRadius = imageSize/2
+        profileImage.layer.cornerRadius = imageSize / 2
         profileImage.clipsToBounds = true
         profileImage.contentMode = .scaleAspectFit
         profileImage.layer.borderWidth = 3
@@ -66,9 +59,6 @@ class ProfileHeaderView: UIView {
         statusLabel.textColor = .systemGray6
         statusLabel.textAlignment = .center
         
-        
-        
-        addSubview(view)
         addSubview(profileImage)
         addSubview(profileLabel)
         addSubview(profileButton)
@@ -77,5 +67,6 @@ class ProfileHeaderView: UIView {
     
     @objc private func buttonPressed() {
         print("\(statusLabel.text!)")
+//        print("profileButtonYposition = \(profileButtonYposition)")
     }
 }
