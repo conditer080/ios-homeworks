@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
         
         view.backgroundColor = .lightGray
         
-        profileHV.customize()
+//        profileHV.customize()
         view.addSubview(profileHV)
     }
     

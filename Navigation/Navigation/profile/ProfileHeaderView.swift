@@ -27,10 +27,20 @@ class ProfileHeaderView: UIView {
     
     lazy var statusLabel = UILabel.init(frame: CGRect(x: 0, y: profileButtonYposition - 34, width: screenProfileWidth, height: 16))
     
-    func customize() {
+    required init() {
+        super.init(frame: .zero)
+        customize()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    private func customize() {
         
         backgroundColor = .systemGray3
-               
+        
         profileImage.backgroundColor = .white
         profileImage.image = UIImage(named: "linups_img1")
         profileImage.layer.cornerRadius = imageSize / 2
@@ -67,6 +77,6 @@ class ProfileHeaderView: UIView {
     
     @objc private func buttonPressed() {
         print("\(statusLabel.text!)")
-//        print("profileButtonYposition = \(profileButtonYposition)")
+        //        print("profileButtonYposition = \(profileButtonYposition)")
     }
 }
