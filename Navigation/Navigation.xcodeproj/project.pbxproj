@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190BE5B028200D1B00993EBA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190BE5AF28200D1B00993EBA /* ProfileViewController.swift */; };
+		190BE5B228200D4D00993EBA /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190BE5B128200D4D00993EBA /* ProfileHeaderView.swift */; };
 		19220683280C7370008FBB71 /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19220682280C7370008FBB71 /* infoViewController.swift */; };
 		19237988280B2A80001CC2F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19237987280B2A80001CC2F2 /* AppDelegate.swift */; };
 		1923798A280B2A80001CC2F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19237989280B2A80001CC2F2 /* SceneDelegate.swift */; };
@@ -14,11 +16,13 @@
 		19237991280B2A82001CC2F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19237990280B2A82001CC2F2 /* Assets.xcassets */; };
 		19237994280B2A82001CC2F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19237992280B2A82001CC2F2 /* LaunchScreen.storyboard */; };
 		1923799C280B31DA001CC2F2 /* MainUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923799B280B31DA001CC2F2 /* MainUITabBarController.swift */; };
-		1923799E280B32ED001CC2F2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923799D280B32ED001CC2F2 /* ProfileViewController.swift */; };
+		1923799E280B32ED001CC2F2 /* old_ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923799D280B32ED001CC2F2 /* old_ProfileViewController.swift */; };
 		192379A0280B3F15001CC2F2 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923799F280B3F15001CC2F2 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		190BE5AF28200D1B00993EBA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		190BE5B128200D4D00993EBA /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		19220682280C7370008FBB71 /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
 		19237984280B2A80001CC2F2 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19237987280B2A80001CC2F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -28,7 +32,7 @@
 		19237993280B2A82001CC2F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19237995280B2A82001CC2F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1923799B280B31DA001CC2F2 /* MainUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUITabBarController.swift; sourceTree = "<group>"; };
-		1923799D280B32ED001CC2F2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1923799D280B32ED001CC2F2 /* old_ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = old_ProfileViewController.swift; sourceTree = "<group>"; };
 		1923799F280B3F15001CC2F2 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190BE5AE28200CDB00993EBA /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				190BE5B128200D4D00993EBA /* ProfileHeaderView.swift */,
+				190BE5AF28200D1B00993EBA /* ProfileViewController.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
 		1923797B280B2A80001CC2F2 = {
 			isa = PBXGroup;
 			children = (
@@ -62,12 +75,13 @@
 		19237986280B2A80001CC2F2 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				190BE5AE28200CDB00993EBA /* profile */,
 				19237987280B2A80001CC2F2 /* AppDelegate.swift */,
 				1923799B280B31DA001CC2F2 /* MainUITabBarController.swift */,
 				19237989280B2A80001CC2F2 /* SceneDelegate.swift */,
 				1923798B280B2A80001CC2F2 /* FeedViewController.swift */,
 				19220682280C7370008FBB71 /* infoViewController.swift */,
-				1923799D280B32ED001CC2F2 /* ProfileViewController.swift */,
+				1923799D280B32ED001CC2F2 /* old_ProfileViewController.swift */,
 				1923799F280B3F15001CC2F2 /* PostViewController.swift */,
 				19237990280B2A82001CC2F2 /* Assets.xcassets */,
 				19237992280B2A82001CC2F2 /* LaunchScreen.storyboard */,
@@ -150,8 +164,10 @@
 				1923798C280B2A80001CC2F2 /* FeedViewController.swift in Sources */,
 				19237988280B2A80001CC2F2 /* AppDelegate.swift in Sources */,
 				1923799C280B31DA001CC2F2 /* MainUITabBarController.swift in Sources */,
-				1923799E280B32ED001CC2F2 /* ProfileViewController.swift in Sources */,
+				190BE5B228200D4D00993EBA /* ProfileHeaderView.swift in Sources */,
+				1923799E280B32ED001CC2F2 /* old_ProfileViewController.swift in Sources */,
 				19220683280C7370008FBB71 /* infoViewController.swift in Sources */,
+				190BE5B028200D1B00993EBA /* ProfileViewController.swift in Sources */,
 				1923798A280B2A80001CC2F2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
